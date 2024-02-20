@@ -1,0 +1,14 @@
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\dotnetproject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\dotnetproject.AssemblyInfoInputs.cache
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\dotnetproject.AssemblyInfo.cs
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\dotnetproject.csproj.CoreCompileInputs.cache
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\bin\Debug\net8.0\dotnetproject.exe
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\bin\Debug\net8.0\dotnetproject.deps.json
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\bin\Debug\net8.0\dotnetproject.runtimeconfig.json
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\bin\Debug\net8.0\dotnetproject.dll
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\bin\Debug\net8.0\dotnetproject.pdb
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\dotnetproject.dll
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\refint\dotnetproject.dll
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\dotnetproject.pdb
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\dotnetproject.genruntimeconfig.cache
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\ref\dotnetproject.dll
