@@ -54,20 +54,26 @@ namespace ConsoleApplication2
                 Console.WriteLine($"Error: {ex.Message}");
             }
         }
-
         static void GetRequestHeaders(string domain, HttpClient client)
         {
-            
             var request = new HttpRequestMessage(HttpMethod.Get, domain);
-            var productValue = new ProductInfoHeaderValue("NetProbe", "1.0");
-            request.Headers.UserAgent.Add(productValue);
+            var task = client.SendAsync(request).Result;
+
             Console.WriteLine($"{request.Method} {request.RequestUri} HTTP/{request.Version}");
             foreach (var header in request.Headers.ToList())
             {
                 Console.WriteLine($"{header.Key}: {string.Join(", ", header.Value)}");
             }
 
+            Console.WriteLine("-----------------------------------------------------------");
 
+            Console.WriteLine($"Response Status Code: {task.StatusCode}");
+            foreach (var header in task.Headers)
+            {
+                Console.WriteLine($"{header.Key}: {string.Join(", ", header.Value)}");
+            }
+
+            Console.WriteLine("-----------------------------------------------------------");
         }
 
         static string GetString(HttpClient client, string url)
@@ -87,30 +93,29 @@ namespace ConsoleApplication2
         
         static void addRequestHeader(string domain, HttpClient client)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, domain);
-            var productValue = new ProductInfoHeaderValue("NetProbe", "1.0");
-            request.Headers.UserAgent.Add(productValue);
-            Console.WriteLine($"{request.Method} {request.RequestUri} HTTP/{request.Version}");
-            foreach (var header in request.Headers.ToList())
-            {
-                Console.WriteLine($"{header.Key}: {string.Join(", ", header.Value)}");
-            }
+            string header_name = string.Empty;
+            string header_value = string.Empty;
+            Console.WriteLine("Enter Header Name: ");
+            header_name = Console.ReadLine();
+            Console.WriteLine("Enter Header Value: ");
+            header_value = Console.ReadLine();
+            client.DefaultRequestHeaders.Add(header_name, header_value);
+            GetRequestHeaders(domain,client);
         }
 
 
         public static void Main(string[] args)
         {
             HttpClient client = new HttpClient();
-            var productValue = new ProductInfoHeaderValue("NetProbe", "1.0");
+            var productValue = new ProductInfoHeaderValue("UPRAN", "1.0");
             client.DefaultRequestHeaders.UserAgent.Add(productValue);
 
 
             Boolean isContuniue = true;
 
-
+            Console.WriteLine("Welcome to the Web Request Program");
             while (isContuniue)
             {
-                Console.WriteLine("Welcome to the Web Request Program");
                 Console.WriteLine("What Do You Want To Do? (Please Enter Number)");
                 Console.WriteLine("1. Get Response Header");
                 Console.WriteLine("2. Get Response Body");
@@ -153,7 +158,9 @@ namespace ConsoleApplication2
                         break;
                     case "5":
                         Console.WriteLine("Enter Target Domain/URL");
-
+                        domain = Console.ReadLine();
+                        addRequestHeader(domain,client);
+                        break;
                     case "6":
                         isContuniue = false;
                         break;

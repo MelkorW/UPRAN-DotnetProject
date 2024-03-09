@@ -12,3 +12,4 @@ C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\refint\dotnetp
 C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\dotnetproject.pdb
 C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\dotnetproject.genruntimeconfig.cache
 C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\ref\dotnetproject.dll
+C:\Users\taha_\OneDrive\Masaüstü\dotnetproject\obj\Debug\net8.0\dotnetproject.sourcelink.json
